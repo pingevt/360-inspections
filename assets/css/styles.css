@@ -6,14 +6,60 @@ body {
 
 svg {
   display: block;
-  width: 500px;
+  width: 650px;
   height: auto;
-  margin: 0 auto;
+  margin: -122px auto 0;
   overflow: visible; }
+  svg #swoosh {
+    -webkit-transform-origin: center center;
+        -ms-transform-origin: center center;
+            transform-origin: center center;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+    -webkit-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s;
+    -o-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.75s; }
+  svg #words-1,
+  svg #words-2 {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+    -o-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s, -webkit-transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  svg #numbers {
+    -webkit-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.45s;
+    -o-transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.45s;
+    transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1) 0.45s; }
+  svg #ping--1 {
+    -webkit-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+    -o-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s;
+    transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.5s; }
+  svg #ping--2 {
+    -webkit-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s;
+    -o-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s;
+    transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.4s; }
+  svg #ping--3 {
+    -webkit-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.3s;
+    -o-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.3s;
+    transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.3s; }
+  svg #ping--4 {
+    -webkit-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s;
+    -o-transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s;
+    transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 1.2s; }
 
 p {
   margin: 0;
-  font-size: 2rem; }
+  font-size: 2rem;
+  opacity: 1;
+  -webkit-transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) 1.75s;
+  -o-transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) 1.75s;
+  transition: opacity 0.75s cubic-bezier(0.215, 0.61, 0.355, 1) 1.75s; }
   p.msg {
     font-size: 1rem;
     margin-top: -5em;
@@ -26,5 +72,21 @@ p {
     color: #333; }
   p.email a {
     color: #333; }
+
+.unloaded svg g,
+.unloaded svg path,
+.unloaded p {
+  opacity: 0; }
+
+.unloaded #swoosh {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
+
+.unloaded #words-1,
+.unloaded #words-2 {
+  -webkit-transform: translateX(-300px);
+      -ms-transform: translateX(-300px);
+          transform: translateX(-300px); }
 
 /*# sourceMappingURL=assets/css/maps/styles.css.map */
